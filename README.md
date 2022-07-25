@@ -1,0 +1,1 @@
+# intern-image-tag-extraction-demo
