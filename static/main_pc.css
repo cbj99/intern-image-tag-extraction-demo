@@ -1,0 +1,91 @@
+html {
+    font-family: 'helvetica neue', 'arial', sans-serif;
+    font-weight: bold;
+    padding-top: 3vw;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    background: #5d79e0;
+    overflow: scroll;
+}
+
+h2 {
+    padding-top: 1vw;
+    font-size: 3vw;
+}
+
+#fileUploadForm {
+    position: relative;
+    display: inline-block;
+}
+
+#fileSelect {
+    display: block;
+    padding: 1vw 2vw;
+    color: #fff;
+    background: #222;
+    border-radius: 0.5em;
+    transition: background 0.3s;
+    margin-bottom: 1.5vw;
+    font-size: 1vw;
+    width: 30vw
+}
+
+#addTag {
+    display: block;
+    padding: 1vw 2vw;
+    color: #222;
+    background: #fff;
+    border-radius: 0.5em;
+    transition: background 0.3s;
+    margin-bottom: 1.5vw;
+    font-size: 1vw;
+    width: 30vw
+}
+
+#fileSelect:hover {
+    background: #000;
+}
+
+#btnSubmit {
+    padding: 0.5vw 1.5vw;
+    color: #222;
+    background: #fff;
+    border-radius: 0.5em;
+    font-size: 1vw;
+}
+
+#btnSubmit:hover {
+    background: rgba(205, 197, 193, 0.726);
+}
+
+#hint {
+    display: block;
+    margin-bottom: 0.5vw;
+    font-size: 1vw;
+}
+
+#tag_message {
+    display: block;
+    margin-bottom: 0.5vw;
+    margin-left: -2vw;
+    font-size: 1vw;
+    color: chartreuse;
+}
+
+table,
+table tr th,
+table tr td {
+    border: 1px solid #000;
+    font-size: 1.5vw;
+}
+
+table {
+    min-height: 3vw;
+    line-height: 3vw;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 2px;
+    margin: auto;
+    margin-top: 1.5vw;
+    background: #fff;
+}

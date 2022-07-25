@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title name="tab-title">image label extraction demo</title>
+    <link rel="stylesheet" media="screen and (min-width: 768px)" type="text/css" href="{{ url_for('static', filename='main_pc.css') }}">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="{{ url_for('static', filename='main_mobile.css') }}">
+</head>
+
+<body>
+    <h2>图片标签提取</h2>
+
+    <form id="fileUploadForm" method='post' enctype='multipart/form-data' action='/uploader'>
+        <input type="file" multiple="" name="file[]" id="fileSelect">
+        <p id="hint">为上传图片添加自定义标签(可选, 且图片数量需大于等于5张来重新训练模型)</p>
+        <input type="text" name="newTag" id="addTag" placeholder="若此处为空则默认使用模型中原有标签来进行识别">
+        <button type="submit" id="btnSubmit">Upload</button>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <p id="tag_message">{{ message }}</p>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <table>
+        <tr>
+            <th style="width: 15vw;">文件名</th>
+            <th style="width: 12vw;">标签</th>
+        </tr>
+        {%for result in data%}
+        <tr>
+            <td> {{result[0]}} </td>
+            <td> {{result[1]}} </td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+
+</html>
